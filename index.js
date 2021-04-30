@@ -3,9 +3,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  res.json({ message: "hello world" });
+  res.send("<h2>Express CI/CD</h2>");
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+module.exports = server;
